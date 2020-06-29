@@ -23,12 +23,20 @@ public class ProductServiceImpl implements ProductService {
 
     private static final String ID_PARAMETR_NAME = "id";
 
-    @Autowired
-    private ProductRepository productRepository;
-    @Autowired
-    private BrandService brandService;
-    @Autowired
-    private CategoryService categoryService;
+    private final ProductRepository productRepository;
+    private final BrandService brandService;
+    private final CategoryService categoryService;
+
+    public ProductServiceImpl(
+            ProductRepository productRepository,
+            BrandService brandService,
+            CategoryService categoryService
+    ) {
+        this.productRepository = productRepository;
+        this.brandService = brandService;
+        this.categoryService = categoryService;
+    }
+
 
     @Override
     public List<Product> getProducts() {

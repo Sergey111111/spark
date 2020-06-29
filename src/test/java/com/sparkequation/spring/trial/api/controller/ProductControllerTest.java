@@ -1,7 +1,5 @@
 package com.sparkequation.spring.trial.api.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sparkequation.spring.trial.api.model.Product;
 import com.sparkequation.spring.trial.api.service.ProductService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
@@ -17,12 +14,10 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Collections;
 import java.util.stream.Collectors;
 
-import static com.sparkequation.spring.trial.api.controller.TestData.products;
-import static com.sparkequation.spring.trial.api.controller.TestData.testProduct;
-import static org.junit.jupiter.api.Assertions.*;
+import static com.sparkequation.spring.trial.api.TestData.products;
+import static com.sparkequation.spring.trial.api.TestData.testProduct;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;

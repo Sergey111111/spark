@@ -1,4 +1,4 @@
-package com.sparkequation.spring.trial.api.controller;
+package com.sparkequation.spring.trial.api;
 
 import com.sparkequation.spring.trial.api.model.Product;
 
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public final class TestData {
-    static Product testProduct = Product.builder()
+    public static Product testProduct = Product.builder()
             .id(42)
             .name("Test product")
             .featured(false)
@@ -18,5 +18,5 @@ public final class TestData {
             .rating(12.0)
             .build();
 
-    static List<Product> products = Stream.of(testProduct).collect(Collectors.toList());
+    public static List<Product> products = Stream.of(testProduct).collect(Collectors.toList());
 }
