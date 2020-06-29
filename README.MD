@@ -22,7 +22,7 @@ Lots of error responses comes with pretty user-friendly view so that's because
 I used GlobalHandler for catching exceptions
 
 To test this project you can use postman collection witch is provided
-in root directory as JSON file. It's very easy to run it query by query
+in root directory as JSON file **Sparkly_queries.postman_collection.json**. It's very easy to run it query by query
 to check how the application works.
 
 I also use Lombok framework to shorten all the boilerplate pojo code.
